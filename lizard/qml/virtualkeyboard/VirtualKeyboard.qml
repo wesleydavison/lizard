@@ -7,6 +7,7 @@ Rectangle {
     color: "#8e8d98"
     width: column.width + margins * 2
     height: column.height + margins * 2
+    border.width: 1
 
     ScanGroup {
         x: margins
