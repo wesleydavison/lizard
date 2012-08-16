@@ -99,7 +99,7 @@ Rectangle {
             /*width:areaTotal.width - areaTopRight.width
             height:areaTotal.height - areaTopRight.height*/
 
-            /*MenuConfig{
+            MenuConfig{
                 id:menuConfig
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -107,7 +107,7 @@ Rectangle {
                 width: parent.width - 20
                 height: parent.height - 20
 
-            }*/
+            }
 
         }
 

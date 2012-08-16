@@ -6,8 +6,6 @@ Rectangle {
     anchors.centerIn: parent
     anchors.margins: 20
     color: "#ffffff"
-    width: 600
-    height: parent.height - 20
     border.color: "#000"
     border.width: 1
 
@@ -15,6 +13,6 @@ Rectangle {
         anchors.fill: parent
         text: "MenuApps"
         cursorVisible: true
-        font.pixelSize: 10
+        font.pixelSize: 20
     }
 }

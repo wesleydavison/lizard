@@ -8,10 +8,13 @@ vk.target = qml
 te.source = qml/texteditor
 te.target = qml
 
-ma.souce = qml/menuapps
+ma.source = qml/menuapps
 ma.target = qml
 
-DEPLOYMENTFOLDERS = folder_01 vk te ma
+mc.source = qml/menuconfig
+mc.target = qml
+
+DEPLOYMENTFOLDERS = folder_01 vk te ma mc
 
 # Additional import path used to resolve QML modules in Creator's code model
 QML_IMPORT_PATH = ../scanning
