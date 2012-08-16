@@ -6,8 +6,6 @@ Rectangle {
     anchors.centerIn: parent
     anchors.margins: 20
     color: "#ccc"
-    width: 600
-    height: parent.height - 20
     border.color: "#000"
     border.width: 1
 
