@@ -78,11 +78,12 @@ Rectangle {
 
             MenuApps{
                 id:menuApps
-                anchors.top: parent.top
+                //anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
 
-                width: parent.width - 20
-                height: parent.height - 20
+                //width: parent.width - 20
+                //height: parent.height - 20
 
             }
         }
