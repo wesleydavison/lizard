@@ -41,29 +41,6 @@ Rectangle {
 
         }
 
-        Item{
-            id:areaTopRight
-
-            width: 224
-            height: 250
-
-            anchors.right: parent.right
-            anchors.top: parent.top
-
-            //width: areaTotal.width - areaTopLeft.width
-            //height: areaTotal.height - areaBottomRight.height
-
-            MenuApps{
-                id:menuApps
-                anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-
-                width: parent.width - 20
-                height: parent.height - 20
-
-            }
-
-        }
 
         Item{
             id:areaBottomLeft
@@ -88,19 +65,20 @@ Rectangle {
         }
 
         Item{
-            id:areaBottomRight
+            id:areaRight
 
-            width: 224
-            height: 250
+            width: 200
+            height: 500
 
             anchors.right: parent.right
-            anchors.top: areaTopRight.bottom
+            anchors.top: parent.top
 
-            /*width:areaTotal.width - areaTopRight.width
-            height:areaTotal.height - areaTopRight.height*/
+            //width: areaTotal.width - areaTopLeft.width
+            //height: areaTotal.height - areaBottomRight.height
 
-            MenuConfig{
-                id:menuConfig
+            MenuApps{
+                id:menuTeclado
+                margins: 10
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
 
@@ -108,9 +86,7 @@ Rectangle {
                 height: parent.height - 20
 
             }
-
         }
-
     }
 
     ScanningControl {
