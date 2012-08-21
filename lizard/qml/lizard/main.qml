@@ -67,7 +67,7 @@ Rectangle {
         Item{
             id:areaRight
 
-            width: 274
+            width: 264
             height: 500
 
             anchors.right: parent.right
