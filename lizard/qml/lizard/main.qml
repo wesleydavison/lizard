@@ -26,7 +26,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.top: parent.top            
 
-            width: 700
+            width: 800
             height: 250
 
             TextEditor {
@@ -45,7 +45,7 @@ Rectangle {
         Item{
             id:areaBottomLeft
 
-            width: 700
+            width: 800
             height: 250
 
             anchors.top: areaTopLeft.bottom
@@ -67,7 +67,7 @@ Rectangle {
         Item{
             id:areaRight
 
-            width: 274
+            width: 200
             height: 500
 
             anchors.right: parent.right
