@@ -21,7 +21,7 @@ Rectangle {
         y: margins
 
         Row {
-            id: row
+            id: menuGroups
             width: leftColumn.width + centerColumn.width + rightColumn.width + 10
 
 
@@ -29,14 +29,17 @@ Rectangle {
                 id:leftColumn
                 anchors.left: parent.left
                 anchors.top: parent.top
-                menus: "new,open...,save,save as...,close, quit"
+                //menus: "FILE,new,open...,save,save as...,close, quit"
+                menus: "FILE"
             }
 
             MenuColumn {
                 id:centerColumn
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                menus:"copy,cut,paste,undo,redo"
+                //menus:"EDIT,copy,cut,paste,undo,redo"
+                menus:"EDIT"
+
 
             }
 
@@ -44,9 +47,28 @@ Rectangle {
                 id:rightColumn
                 anchors.right: parent.right
                 anchors.top: parent.top
-                menus: "find...,find next,find prev,replace"
+                //menus: "SEARCH,find...,find next,find prev,replace"
+                menus: "SEARCH"
             }
         }
+
+        ScanGroup{
+            id:menuOptions
+
+            y: menuGroups.height + 10
+
+            Row{
+                id:menuGroupItens
+
+                MenuRow{
+                    id:menuItens
+                    menus:"copy,cut,paste,undo,redo"
+                }
+
+            }
+        }
+
+
 
     }
 }
