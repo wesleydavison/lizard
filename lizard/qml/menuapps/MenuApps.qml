@@ -20,31 +20,21 @@ Rectangle {
         x: margins
         y: margins
 
-        Row {
+        Column {
             id: menuGroups
-            width: leftColumn.width + centerColumn.width + rightColumn.width + 10
 
-
-            MenuColumn {
-                id:leftColumn
-                anchors.left: parent.left
+            MenuRow {
                 anchors.top: parent.top
                 menus: "FILE"
             }
 
-            MenuColumn {
-                id:centerColumn
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
+            MenuRow {
+                anchors.verticalCenter: parent.verticalCenter
                 menus:"EDIT"
-
-
             }
 
-            MenuColumn {
-                id:rightColumn
-                anchors.right: parent.right
-                anchors.top: parent.top
+            MenuRow {
+                anchors.bottom: parent.bottom
                 menus: "SEARCH"
             }
         }
@@ -52,7 +42,7 @@ Rectangle {
         ScanGroup{
             id:menuOptions
 
-            y: menuGroups.height + 10
+            x: menuGroups.width + 10
 
             Column{
                 id:menuGroupItens
