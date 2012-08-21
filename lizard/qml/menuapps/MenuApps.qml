@@ -62,13 +62,32 @@ Rectangle {
 
                 MenuRow{
                     id:menuItens
-                    menus:"copy,cut,paste,undo,redo"
+
+                    state:"menuFILE"
+
+                    states: [
+                        State{
+                            name:"menuFILE"
+                            PropertyChanges {
+                                target: menuItens
+                                menus:"new,open...,save,save as...,close, quit"
+                            }
+
+                        },
+                        State{
+                            name:"menuEDIT"
+                            PropertyChanges {
+                                target: menuItens
+                                menus:"copy,cut,paste,undo,redo"
+
+                            }
+                        }
+
+                    ]
                 }
+
 
             }
         }
-
-
-
     }
 }
