@@ -46,7 +46,7 @@ Rectangle {
                 anchors.top: parent.top
                 menus: "find...,find next,find prev,replace"
             }
-
         }
+
     }
 }

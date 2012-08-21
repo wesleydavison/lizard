@@ -79,9 +79,11 @@ Rectangle {
             MenuApps{
                 id:menuTeclado
                 margins: 10
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
 
-                //width: parent.width - 20
-                //height: parent.height - 20
+                width: parent.width - 20
+                height: parent.height - 20
 
             }
         }
