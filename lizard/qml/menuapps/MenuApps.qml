@@ -3,36 +3,48 @@ import QtQuick 1.1
 import com.adrianomelo 1.0
 
 Rectangle {
+    id: menubox
     property int margins: 10
 
     anchors.centerIn: parent
     anchors.margins: 20
-    color: "#ffffff"
+    color: "#ddd"
     border.color: "#000"
-    border.width: 3
+    border.width: 1
 
-    width: row.width + margins * 2
-    height: 5*row.height + margins * 2
+    width: parent.width - 20
+    height: parent.height - 20
 
     ScanGroup {
+        id: scangroup1
         x: margins
         y: margins
 
         Row {
             id: row
+            width: leftColumn.width + centerColumn.width + rightColumn.width + 10
 
-            anchors.verticalCenter: parent.parent.verticalCenter
 
             MenuColumn {
-
-                anchors.verticalCenter: parent.verticalCenter
-                menus: "novo,abrir,salvar,fechar,sair"
+                id:leftColumn
+                anchors.left: parent.left
+                anchors.top: parent.top
+                menus: "new,open...,save,save as...,close, quit"
             }
 
             MenuColumn {
+                id:centerColumn
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: parent.top
+                menus:"copy,cut,paste,undo,redo"
 
-                anchors.verticalCenter: parent.verticalCenter
-                menus: "copiar,cortar,colar,desfazer,refazer"
+            }
+
+            MenuColumn {
+                id:rightColumn
+                anchors.right: parent.right
+                anchors.top: parent.top
+                menus: "find...,find next,find prev,replace"
             }
 
         }

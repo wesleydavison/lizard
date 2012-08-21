@@ -26,7 +26,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.top: parent.top            
 
-            width: 800
+            width: 700
             height: 250
 
             TextEditor {
@@ -45,7 +45,7 @@ Rectangle {
         Item{
             id:areaBottomLeft
 
-            width: 800
+            width: 700
             height: 250
 
             anchors.top: areaTopLeft.bottom
@@ -67,7 +67,7 @@ Rectangle {
         Item{
             id:areaRight
 
-            width: 224
+            width: 274
             height: 500
 
             anchors.right: parent.right
@@ -77,10 +77,8 @@ Rectangle {
             //height: areaTotal.height - areaBottomRight.height
 
             MenuApps{
-                id:menuApps
-                //anchors.top: parent.top
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
+                id:menuTeclado
+                margins: 10
 
                 //width: parent.width - 20
                 //height: parent.height - 20

@@ -5,8 +5,8 @@ import com.adrianomelo 1.0
 ScanGroup {
     property string menuName: ""
 
-    width: 75
-    height: 66
+    width: 70
+    height: 50
 
     Image {
         anchors.fill: parent

@@ -10,7 +10,7 @@ ScanGroup {
 
     Column {
         id: row
-        height: 66
+        height: 50
         anchors.verticalCenter: parent.verticalCenter
 
         Repeater {
