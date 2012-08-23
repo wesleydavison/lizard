@@ -19,20 +19,4 @@ ScanGroup {
         }
     }
 
-    /*Rectangle {
-        anchors.centerIn: parent
-        width: parent.width - border.width * 2
-        height: parent.height - border.width * 2
-        visible: parent.selected
-
-        color: "transparent"
-        border.width: 2
-        border.color: "black"
-        opacity: 0.8
-    }*/
-
-    /*onSelectedChanged: {
-        if (selected)
-            console.log("Selected " + value);
-    }*/
 }
