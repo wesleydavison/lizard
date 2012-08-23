@@ -51,9 +51,6 @@ Rectangle {
             anchors.top: areaTopLeft.bottom
             anchors.left: parent.left
 
-            /*width:areaTotal.width - areaBottomRight.width
-            height:areaTotal.height - areaTopLeft.height*/
-
             VirtualKeyboard {
                 id: virtualKeyboard
 
@@ -65,16 +62,13 @@ Rectangle {
         }
 
         Item{
-            id:areaRight
+            id:areaTopRight
 
             width: 250
-            height: 500
+            height: 250
 
             anchors.right: parent.right
             anchors.top: parent.top
-
-            //width: areaTotal.width - areaTopLeft.width
-            //height: areaTotal.height - areaBottomRight.height
 
             MenuApps{
                 id:menuTeclado
@@ -86,6 +80,38 @@ Rectangle {
                 height: parent.height - 20
 
             }
+        }
+
+        Item{
+            id:areaBottomRight
+
+            width: 250
+            height: 250
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+
+            Taskbar{
+                id:taskbar
+
+                margins: 10
+                anchors.top: parent.top
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                width: parent.width - 20
+                height: parent.height - 20
+
+                Clock{
+                    id:clock
+
+                    anchors.bottom: parent.bottom
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width:parent.width*0.8
+                    height: parent.height*0.1
+
+                }
+            }
+
+
         }
     }
 
