@@ -50,5 +50,5 @@ include(qmlapplicationviewer/qmlapplicationviewer.pri)
 qtcAddDeployment()
 
 OTHER_FILES += \
-    qml/menuconfig/MenuConfig.qml \
-    qml/menuapps/MenuApps.qml
+    qml/menuapps/MenuApps.qml \
+    qml/menuconfig/Taskbar.qml
