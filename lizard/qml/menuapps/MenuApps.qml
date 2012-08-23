@@ -20,7 +20,7 @@ Rectangle {
         x: margins
         y: margins
 
-        Column {
+        Row {
             id: menuGroups
 
             MenuRow {
@@ -39,50 +39,48 @@ Rectangle {
             }
         }
 
-        ScanGroup{
-            id:menuOptions
 
-            x: menuGroups.width + 10
+        Row{
+            id:menuGroupOptions
+            y: menuGroups.height + 10
+            anchors.right: menuGroups.right
 
-            Column{
-                id:menuGroupItens
+            MenuRow{
+                id:menuItens
 
-                MenuColumn{
-                    id:menuItens
 
-                    state:"menuFILE"
+                state:"menuEDIT"
 
-                    states: [
-                        State{
-                            name:"menuFILE"
-                            PropertyChanges {
-                                target: menuItens
-                                menus:"new,open...,save,save as...,close, quit"
-                            }
-
-                        },
-                        State{
-                            name:"menuEDIT"
-                            PropertyChanges {
-                                target: menuItens
-                                menus:"copy,cut,paste,undo,redo"
-
-                            }
-                        },
-                        State{
-                            name:"menuSEARCH"
-                            PropertyChanges {
-                                target: menuItens
-                                menus:"find...,find next,find prev,replace"
-
-                            }
+                states: [
+                    State{
+                        name:"menuFILE"
+                        PropertyChanges {
+                            target: menuItens
+                            menus:"new,open...,save,save as...,close, quit"
                         }
 
-                    ]
-                }
+                    },
+                    State{
+                        name:"menuEDIT"
+                        PropertyChanges {
+                            target: menuItens
+                            menus:"copy,cut,paste,undo,redo"
 
+                        }
+                    },
+                    State{
+                        name:"menuSEARCH"
+                        PropertyChanges {
+                            target: menuItens
+                            menus:"find...,find next,find prev,replace"
 
+                        }
+                    }
+
+                ]
             }
+
         }
+
     }
 }
