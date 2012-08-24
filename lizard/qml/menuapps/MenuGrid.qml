@@ -5,12 +5,13 @@ import com.adrianomelo 1.0
 ScanGroup {
     property string menus: ""
 
-    height: row.height
-    width: row.width
+    height: grid.height
+    width: grid.width
 
-    Row{
-        id: row
+    Grid {
+        id: grid
         height: 50
+        columns: 3
         anchors.horizontalCenter: parent.horizontalCenter
 
         Repeater {
