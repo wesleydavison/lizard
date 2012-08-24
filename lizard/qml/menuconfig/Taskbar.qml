@@ -11,10 +11,44 @@ Rectangle {
     border.color: "#000"
     border.width: 1
 
-    TextEdit {
-        anchors.fill: parent
-        text: "Taskbar"
-        cursorVisible: true
-        font.pixelSize: 20
+    Rectangle {
+        id:windowTitle
+        anchors.top: parent.top
+        color: "#ccc"
+        border.color: "#000"
+        border.width: 1
+        width:parent.width
+        height: parent.height*0.1
+
+        TextEdit {
+            anchors.fill: parent
+            text: "Recent Openned"
+            horizontalAlignment: TextEdit.AlignHCenter
+            verticalAlignment: TextEdit.AlignVCenter
+            font.pixelSize: 15
+        }
+    }
+
+    ScanGroup {
+        id: scangroup1
+        x: margins
+        y: margins
+        anchors.top: windowTitle.bottom
+        //anchors.horizontalCenter: parent.horizontalCenter
+
+        IconGrid{
+            id:recentOpennedApps
+            icons: "icon1,icon2,icon3"
+        }
+    }
+
+    Clock{
+        id:clock
+
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        width:parent.width*0.8
+        height: parent.height*0.1
+
     }
 }

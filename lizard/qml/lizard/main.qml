@@ -100,15 +100,6 @@ Rectangle {
                 width: parent.width - 20
                 height: parent.height - 20
 
-                Clock{
-                    id:clock
-
-                    anchors.bottom: parent.bottom
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width:parent.width*0.8
-                    height: parent.height*0.1
-
-                }
             }
 
 

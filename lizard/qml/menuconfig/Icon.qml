@@ -1,11 +1,10 @@
-// import QtQuick 1.0 // to target S60 5th Edition or Maemo 5
 import QtQuick 1.1
 import com.adrianomelo 1.0
 
 ScanGroup {
-    property string menuName: ""
+    property string iconName: ""
 
-    width: 70
+    width: 50
     height: 50
 
     Image {
@@ -14,8 +13,8 @@ ScanGroup {
 
         Text {
             anchors.centerIn: parent
-            text: menuName
-            color: "black"
+            text: iconName
+            color: "blue"
         }
     }
 }
