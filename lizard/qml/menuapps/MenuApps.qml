@@ -15,10 +15,29 @@ Rectangle {
     width: parent.width - 20
     height: parent.height - 20
 
+    Rectangle {
+        id:windowTitle
+        anchors.top: parent.top
+        color: "#ccc"
+        border.color: "#000"
+        border.width: 1
+        width:parent.width
+        height: parent.height*0.1
+
+        TextEdit {
+            anchors.fill: parent
+            text: "Menu"
+            horizontalAlignment: TextEdit.AlignHCenter
+            verticalAlignment: TextEdit.AlignVCenter
+            font.pixelSize: 15
+        }
+    }
+
     ScanGroup {
         id: scangroup1
         x: margins
         y: margins
+        anchors.top: windowTitle.bottom
 
         Row {
             id: menuGroups
@@ -49,7 +68,7 @@ Rectangle {
             MenuGrid{
                 id:menuItens
 
-                state:"menuFILE"
+                state:"menuEDIT"
 
                 states: [
                     State{
