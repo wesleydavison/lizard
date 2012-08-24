@@ -44,19 +44,19 @@ Rectangle {
             id:menuGroupOptions
             y: menuGroups.height + 10
             anchors.right: menuGroups.right
+            width: menuGroups.width
 
-            MenuRow{
+            MenuGrid{
                 id:menuItens
 
-
-                state:"menuEDIT"
+                state:"menuFILE"
 
                 states: [
                     State{
                         name:"menuFILE"
                         PropertyChanges {
                             target: menuItens
-                            menus:"new,open...,save,save as...,close, quit"
+                            menus:"new,open...,save,save as...,close,quit"
                         }
 
                     },
