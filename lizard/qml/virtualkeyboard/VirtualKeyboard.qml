@@ -17,14 +17,8 @@ Rectangle {
         x: margins
         y: margins
 
-        Rectangle{
+        Dictionary{
             id:dictionary
-            width:column.width
-            height: 30
-            anchors.top: parent.top
-            color: "#ccc"
-            border.color: "#000"
-            border.width: 1
         }
 
         Column {

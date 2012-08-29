@@ -115,7 +115,7 @@ Rectangle {
 
     Timer {
         running: true
-        interval: 750
+        interval: 1000
         repeat: true
         onTriggered: main.next();
     }
