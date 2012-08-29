@@ -7,14 +7,17 @@ import "../menuconfig/"
 
 /* Main Window */
 Rectangle {
+    id:main
     color: "#8e8d98"
     width: 1024
     height: 500
+
 
     function next()
     {
         control.next();
     }
+
 
     Item {
         id:areaTotal
@@ -24,7 +27,7 @@ Rectangle {
         Item{
             id:areaTopLeft
             anchors.left: parent.left
-            anchors.top: parent.top            
+            anchors.top: parent.top
 
             width: 774
             height: 250
@@ -114,12 +117,7 @@ Rectangle {
         running: true
         interval: 1000
         repeat: true
-        onTriggered: parent.next();
-    }
-
-    focus: true
-    Keys.onPressed: {
-        control.select();
+        onTriggered: main.next();
     }
 
     MouseArea {
