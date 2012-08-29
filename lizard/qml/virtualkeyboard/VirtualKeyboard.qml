@@ -6,17 +6,32 @@ Rectangle {
 
     color: "#8e8d98"
     width: column.width + margins * 2
-    height: column.height + margins * 2
-
+    height: column.height + margins * 2 + dictionary.height
 
     border.width: 1
 
+
+
     ScanGroup {
+        id:keyboard
         x: margins
         y: margins
 
+        Rectangle{
+            id:dictionary
+            width:column.width
+            height: 30
+            anchors.top: parent.top
+            color: "#ccc"
+            border.color: "#000"
+            border.width: 1
+        }
+
         Column {
             id: column
+            anchors.top: dictionary.bottom
+            anchors.topMargin: margins
+
 
             LettersRow {
                 anchors.horizontalCenter: parent.horizontalCenter
